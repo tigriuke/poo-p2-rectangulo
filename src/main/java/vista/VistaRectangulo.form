@@ -70,28 +70,21 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Component id="panel" min="-2" pref="552" max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="pxVerificar" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="pyVerificar" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="btnVerificarPunto" alignment="0" min="-2" pref="239" max="-2" attributes="0"/>
-                          <Component id="jLabel17" alignment="0" min="-2" pref="251" max="-2" attributes="0"/>
-                      </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="pxVerificar" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                      <Component id="resultadoVerificacion" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="pyVerificar" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <Component id="btnVerificarPunto" alignment="0" min="-2" pref="239" max="-2" attributes="0"/>
+                  <Component id="jLabel17" alignment="0" min="-2" pref="251" max="-2" attributes="0"/>
+                  <Component id="resultadoVerificacion" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="15" max="32767" attributes="0"/>
           </Group>
@@ -116,7 +109,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnVerificarPunto" min="-2" pref="60" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="resultadoVerificacion" min="-2" max="-2" attributes="0"/>
+              <Component id="resultadoVerificacion" min="-2" pref="10" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -359,9 +352,6 @@
         <Component class="javax.swing.JLabel" name="jLabel8">
         </Component>
         <Component class="javax.swing.JLabel" name="textoCreacionRectangulo">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Rect&#xe1;ngulo creado correctamente."/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
@@ -494,9 +484,6 @@
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="resultadoVerificacion">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Si se encuentra dentro del rect&#xe1;ngulo"/>
-      </Properties>
     </Component>
   </SubComponents>
 </Form>

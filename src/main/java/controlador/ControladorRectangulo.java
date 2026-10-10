@@ -102,6 +102,33 @@ public class ControladorRectangulo {
     }
     
     public void verificarPunto(){
+        if(rectangulo == null){
+            vista.mostrarError("No se ha creado ningún rectángulo.");
+            return;
+        }
+        
+        double px;
+        double py;
+        try{
+            px = Double.parseDouble(vista.getPxVerificar().replace(',', '.'));
+            py = Double.parseDouble(vista.getPyVerificar().replace(',', '.'));
+        }
+        catch (NumberFormatException e ){
+            vista.mostrarError("Los datos ingresados son invalidos y se arrojo la excepcion: \n" + e);
+            return;
+        }
+        
+        double limDerecho = Math.max(rectangulo.getPunto1().getX(), rectangulo.getPunto2().getX());
+        double limIzquierdo = Math.min(rectangulo.getPunto1().getX(), rectangulo.getPunto2().getX());
+        double limSuperior = Math.max(rectangulo.getPunto1().getY(), rectangulo.getPunto2().getY());
+        double limInferior = Math.max(rectangulo.getPunto1().getY(), rectangulo.getPunto2().getY());
+        
+        if(px > limIzquierdo && px < limDerecho && py > limInferior && py < limSuperior){
+            vista.setResultadoVerificacion("El punto se encuentra dentro del rectángulo.");
+        }
+        else{
+            vista.setResultadoVerificacion("El punto no se encuentra dentro del rectángulo.");
+        }
     
     }
 }
