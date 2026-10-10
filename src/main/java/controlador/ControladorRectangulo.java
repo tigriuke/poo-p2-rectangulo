@@ -121,9 +121,9 @@ public class ControladorRectangulo {
         double limDerecho = Math.max(rectangulo.getPunto1().getX(), rectangulo.getPunto2().getX());
         double limIzquierdo = Math.min(rectangulo.getPunto1().getX(), rectangulo.getPunto2().getX());
         double limSuperior = Math.max(rectangulo.getPunto1().getY(), rectangulo.getPunto2().getY());
-        double limInferior = Math.max(rectangulo.getPunto1().getY(), rectangulo.getPunto2().getY());
+        double limInferior = Math.min(rectangulo.getPunto1().getY(), rectangulo.getPunto2().getY());
         
-        if(px > limIzquierdo && px < limDerecho && py > limInferior && py < limSuperior){
+        if(px >= limIzquierdo && px <= limDerecho && py >= limInferior && py <= limSuperior){
             vista.setResultadoVerificacion("El punto se encuentra dentro del rectángulo.");
         }
         else{

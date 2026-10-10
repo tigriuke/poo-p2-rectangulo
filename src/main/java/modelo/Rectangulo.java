@@ -37,7 +37,7 @@ public class Rectangulo extends FiguraGeometrica {
                 "\nVertice 2: " + "(" + punto1.getX() + ", " + punto2.getY() + ")" +
                 "\nVertice 3: " + "(" + punto2.getX() + ", " + punto1.getY() + ")" + 
                 "\nVertice 4: " + "(" + punto2.getX() + ", " + punto2.getY() + ")" + 
-                "\nArea: " + calcularArea();
+                "\nArea: " + calcularArea() + " [u^2]";
     }
     public Punto getPunto1() {
         return punto1;
