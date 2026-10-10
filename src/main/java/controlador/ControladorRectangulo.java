@@ -25,13 +25,13 @@ public class ControladorRectangulo {
         double p2x;
         double p2y;
         try{
-            p1x = Double.parseDouble(vista.getP1xCreacion());
-            p1y = Double.parseDouble(vista.getP1yCreacion());
-            p2x = Double.parseDouble(vista.getP2xCreacion());
-            p2y = Double.parseDouble(vista.getP2yCreacion());
+            p1x = Double.parseDouble(vista.getP1xCreacion().replace(',', '.'));
+            p1y = Double.parseDouble(vista.getP1yCreacion().replace(',', '.'));
+            p2x = Double.parseDouble(vista.getP2xCreacion().replace(',', '.'));
+            p2y = Double.parseDouble(vista.getP2yCreacion().replace(',', '.'));
         }
         catch(NumberFormatException e){
-            vista.mostrarError("Los datos ingresados son invalidos y se arrojo la excepcion \n" + e);
+            vista.mostrarError("Los datos ingresados son invalidos y se arrojo la excepcion: \n" + e);
             return;
         }
         
@@ -48,10 +48,57 @@ public class ControladorRectangulo {
         vista.setResultadoCreacion(rectangulo.toString());
     }
     
-    public void escalarRectangulo(){
+    public void moverRectangulo(){
+        if(rectangulo == null){
+            vista.mostrarError("No se ha creado ningún rectángulo.");
+            return;
+        }
+        double dx;
+        double dy;
+        try{
+            dx = Double.parseDouble(vista.getInputDX().replace(',', '.'));
+            dy = Double.parseDouble(vista.getInputDY().replace(',', '.'));
+        }
+        catch(NumberFormatException e){
+            vista.mostrarError("Los datos ingresados son invalidos y se arrojo la excepcion: \n" + e);
+            return;
+        }
         
+        rectangulo.mover(dx, dy);
+        vista.setResultadoMover(rectangulo.toString());
+        
+        
+    }
     
-    
+    public void escalarRectangulo(){
+        if(rectangulo == null){
+            vista.mostrarError("No se ha creado ningún rectángulo.");
+            return;
+        }
+        
+        double factor;
+        try{
+            factor = Double.parseDouble(vista.getFactorEscalar().replace(',', '.'));
+            if(factor <= 0){
+                vista.mostrarError("El factor a escalar tiene que ser mayor a 0.");
+                return;
+            }
+        }
+        catch (NumberFormatException e ){
+            vista.mostrarError("Los datos ingresados son invalidos y se arrojo la excepcion: \n" + e);
+            return;
+        }
+        
+        double x1 = rectangulo.getPunto1().getX();
+        double y1 = rectangulo.getPunto1().getY();
+        double x2 = rectangulo.getPunto2().getX();
+        double y2 = rectangulo.getPunto2().getY();
+        
+        double nuevox = x1 + (x2 - x1) * factor;
+        double nuevoy = y1 + (y2 - y1) * factor;
+        Punto nuevoPunto = new Punto(nuevox, nuevoy);
+        rectangulo.setPunto2(nuevoPunto);
+        vista.setResultadoEscalar(rectangulo.toString());
     
     }
 }
