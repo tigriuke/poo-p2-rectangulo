@@ -347,15 +347,15 @@ public class VistaRectangulo extends javax.swing.JFrame {
     }//GEN-LAST:event_botonCrearRectanguloActionPerformed
 
     private void btnEscalarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEscalarActionPerformed
-        // TODO add your handling code here:
+        controlador.escalarRectangulo();
     }//GEN-LAST:event_btnEscalarActionPerformed
 
     private void btnVerificarPuntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificarPuntoActionPerformed
-        // TODO add your handling code here:
+        controlador.verificarPunto();
     }//GEN-LAST:event_btnVerificarPuntoActionPerformed
 
     private void botonMoverRectanguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMoverRectanguloActionPerformed
-        // TODO add your handling code here:
+        controlador.moverRectangulo();
     }//GEN-LAST:event_botonMoverRectanguloActionPerformed
     
 // Lectura de campos siempre como String el controlador convierte

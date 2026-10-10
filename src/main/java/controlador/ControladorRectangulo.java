@@ -14,9 +14,8 @@ public class ControladorRectangulo {
     private VistaRectangulo vista;
     private Rectangulo rectangulo;
 
-    public ControladorRectangulo(VistaRectangulo vista, Rectangulo rectangulo) {
+    public ControladorRectangulo(VistaRectangulo vista) {
         this.vista = vista;
-        this.rectangulo = rectangulo;
     }
     
     public void crearRectangulo(){
@@ -43,7 +42,7 @@ public class ControladorRectangulo {
         Punto p1 = new Punto(p1x, p1y);
         Punto p2 = new Punto(p2x, p2y);
 
-        rectangulo = new Rectangulo(p1, p2);
+        this.rectangulo = new Rectangulo(p1, p2);
         vista.setTextoCreacion("Rectangulo creado correctamente.");
         vista.setResultadoCreacion(rectangulo.toString());
     }
@@ -99,6 +98,10 @@ public class ControladorRectangulo {
         Punto nuevoPunto = new Punto(nuevox, nuevoy);
         rectangulo.setPunto2(nuevoPunto);
         vista.setResultadoEscalar(rectangulo.toString());
+    
+    }
+    
+    public void verificarPunto(){
     
     }
 }
