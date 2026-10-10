@@ -3,13 +3,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package vista;
+import controlador.ControladorRectangulo;
 
 /**
  *
  * @author coffe
  */
 public class VistaRectangulo extends javax.swing.JFrame {
-    
+    private ControladorRectangulo controlador;   
+    public void setControlador(ControladorRectangulo controlador) {
+        this.controlador = controlador;
+    }
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VistaRectangulo.class.getName());
 
     /**
@@ -28,22 +33,404 @@ public class VistaRectangulo extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel14 = new javax.swing.JLabel();
+        botonMoverRectangulo1 = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
+        jTextField9 = new javax.swing.JTextField();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea4 = new javax.swing.JTextArea();
+        jTextField8 = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        panel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        p1xCreacion = new javax.swing.JTextField();
+        p1yCreacion = new javax.swing.JTextField();
+        p2xCreacion = new javax.swing.JTextField();
+        p2yCreacion = new javax.swing.JTextField();
+        botonCrearRectangulo = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        textoCreacionRectangulo = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        campoRectangulo = new javax.swing.JTextArea();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        inputDX = new javax.swing.JTextField();
+        inputDY = new javax.swing.JTextField();
+        botonMoverRectangulo = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        campoMovimientoRectangulo = new javax.swing.JTextArea();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        factorEscalar = new javax.swing.JTextField();
+        btnEscalar = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        campoEscala = new javax.swing.JTextArea();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        pyVerificar = new javax.swing.JTextField();
+        pxVerificar = new javax.swing.JTextField();
+        btnVerificarPunto = new javax.swing.JButton();
+        resultadoVerificacion = new javax.swing.JLabel();
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel14.setText("Mover rectángulo");
+
+        botonMoverRectangulo1.setText("Mover Rectángulo");
+
+        jLabel15.setText("Movimiento en X (dx):");
+
+        jTextArea4.setColumns(20);
+        jTextArea4.setRows(5);
+        jScrollPane4.setViewportView(jTextArea4);
+
+        jLabel16.setText("Movimiento en Y (dy):");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        panel.setForeground(new java.awt.Color(51, 51, 51));
+        panel.setToolTipText("");
+        panel.setName(""); // NOI18N
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setText("Creación de rectángulo");
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        jLabel2.setText("Punto 1");
+
+        jLabel3.setText("Coordenadas en X:");
+
+        jLabel4.setText("Coordenadas en Y:");
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        jLabel5.setText("Punto 2 (Opuesto al punto 1)");
+
+        jLabel6.setText("Coordenadas en X:");
+
+        jLabel7.setText("Coordenadas en Y:");
+
+        p1xCreacion.setColumns(8);
+        p1xCreacion.setToolTipText("Ingresa un numero");
+        p1xCreacion.addActionListener(this::p1xCreacionActionPerformed);
+
+        p1yCreacion.setColumns(8);
+        p1yCreacion.setToolTipText("Ingresa un numero");
+        p1yCreacion.addActionListener(this::p1yCreacionActionPerformed);
+
+        p2xCreacion.setColumns(8);
+        p2xCreacion.setToolTipText("Ingresa un numero");
+
+        p2yCreacion.setColumns(8);
+        p2yCreacion.setToolTipText("Ingresa un numero");
+
+        botonCrearRectangulo.setBackground(new java.awt.Color(255, 153, 153));
+        botonCrearRectangulo.setText("Crear Rectángulo");
+        botonCrearRectangulo.addActionListener(this::botonCrearRectanguloActionPerformed);
+
+        textoCreacionRectangulo.setBackground(new java.awt.Color(0, 0, 0));
+        textoCreacionRectangulo.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        textoCreacionRectangulo.setText("ejemplo");
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel9.setText("Mover rectángulo");
+
+        campoRectangulo.setColumns(20);
+        campoRectangulo.setRows(5);
+        jScrollPane1.setViewportView(campoRectangulo);
+
+        jLabel10.setText("Movimiento en X (dx):");
+
+        jLabel11.setText("Movimiento en Y (dy):");
+
+        inputDX.setColumns(8);
+        inputDX.setToolTipText("Ingresa un numero");
+        inputDX.addActionListener(this::inputDXActionPerformed);
+
+        inputDY.setColumns(8);
+        inputDY.setToolTipText("Ingresa un numero");
+
+        botonMoverRectangulo.setBackground(new java.awt.Color(255, 153, 153));
+        botonMoverRectangulo.setText("Mover Rectángulo");
+        botonMoverRectangulo.addActionListener(this::botonMoverRectanguloActionPerformed);
+
+        campoMovimientoRectangulo.setColumns(20);
+        campoMovimientoRectangulo.setRows(5);
+        jScrollPane2.setViewportView(campoMovimientoRectangulo);
+
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel12.setText("Escalar rectángulo");
+
+        jLabel13.setText("Factor a escalar ");
+
+        factorEscalar.setColumns(8);
+        factorEscalar.setToolTipText("Ingresa un numero");
+
+        btnEscalar.setBackground(new java.awt.Color(255, 153, 153));
+        btnEscalar.setText("Escalar Rectángulo");
+        btnEscalar.addActionListener(this::btnEscalarActionPerformed);
+
+        campoEscala.setColumns(20);
+        campoEscala.setRows(5);
+        jScrollPane3.setViewportView(campoEscala);
+
+        jLabel18.setText("Coordenada en X del punto:");
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel17.setText("¿Punto dentro del rectángulo?");
+
+        jLabel19.setText("Coordenada en Y del punto:");
+
+        pyVerificar.setColumns(8);
+        pyVerificar.setToolTipText("Ingresa un numero");
+
+        pxVerificar.setColumns(8);
+        pxVerificar.setToolTipText("Ingresa un numero");
+
+        btnVerificarPunto.setBackground(new java.awt.Color(255, 153, 153));
+        btnVerificarPunto.setText("Verificar");
+        btnVerificarPunto.addActionListener(this::btnVerificarPuntoActionPerformed);
+
+        resultadoVerificacion.setBackground(new java.awt.Color(0, 0, 0));
+        resultadoVerificacion.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        resultadoVerificacion.setText("ejemplo");
+
+        javax.swing.GroupLayout panelLayout = new javax.swing.GroupLayout(panel);
+        panel.setLayout(panelLayout);
+        panelLayout.setHorizontalGroup(
+            panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelLayout.createSequentialGroup()
+                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(panelLayout.createSequentialGroup()
+                                    .addComponent(jLabel10)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(inputDX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel2)
+                                    .addGroup(panelLayout.createSequentialGroup()
+                                        .addComponent(jLabel3)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(p1xCreacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(panelLayout.createSequentialGroup()
+                                        .addComponent(jLabel4)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(p1yCreacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel5)
+                                    .addGroup(panelLayout.createSequentialGroup()
+                                        .addComponent(jLabel6)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(p2xCreacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(panelLayout.createSequentialGroup()
+                                        .addComponent(jLabel7)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(p2yCreacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabel9)
+                            .addGroup(panelLayout.createSequentialGroup()
+                                .addComponent(jLabel11)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(inputDY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelLayout.createSequentialGroup()
+                                .addGap(337, 337, 337)
+                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panelLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(botonCrearRectangulo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(botonMoverRectangulo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(textoCreacionRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(panelLayout.createSequentialGroup()
+                                        .addGap(194, 194, 194)
+                                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addGroup(panelLayout.createSequentialGroup()
+                                                .addComponent(jLabel18)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(pxVerificar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(panelLayout.createSequentialGroup()
+                                                .addComponent(jLabel19)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(pyVerificar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(resultadoVerificacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(btnVerificarPunto, javax.swing.GroupLayout.DEFAULT_SIZE, 321, Short.MAX_VALUE)))))))
+                    .addComponent(jLabel12)
+                    .addGroup(panelLayout.createSequentialGroup()
+                        .addComponent(jLabel13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(factorEscalar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(44, 44, 44)
+                        .addComponent(btnEscalar)
+                        .addGap(18, 18, 18)
+                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panelLayout.setVerticalGroup(
+            panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelLayout.createSequentialGroup()
+                .addGap(8, 8, 8)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(panelLayout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(textoCreacionRectangulo)
+                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelLayout.createSequentialGroup()
+                                .addGap(85, 85, 85)
+                                .addComponent(jLabel17)
+                                .addGap(18, 18, 18)
+                                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(pxVerificar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(26, 26, 26))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(5, 5, 5)))
+                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelLayout.createSequentialGroup()
+                                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel19)
+                                    .addComponent(pyVerificar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addComponent(btnVerificarPunto, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(resultadoVerificacion, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panelLayout.createSequentialGroup()
+                                .addGap(23, 23, 23)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(panelLayout.createSequentialGroup()
+                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(botonCrearRectangulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelLayout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel3)
+                                    .addComponent(p1xCreacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel4)
+                                    .addComponent(p1yCreacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel6)
+                                    .addComponent(p2xCreacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel7)
+                                    .addComponent(p2yCreacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(20, 20, 20)
+                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelLayout.createSequentialGroup()
+                                .addComponent(jLabel9)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(inputDX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel11)
+                                    .addComponent(inputDY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(botonMoverRectangulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(factorEscalar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnEscalar, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane3))
+                .addContainerGap(11, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void botonCrearRectanguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCrearRectanguloActionPerformed
+        controlador.crearRectangulo();
+    }//GEN-LAST:event_botonCrearRectanguloActionPerformed
+
+    private void btnEscalarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEscalarActionPerformed
+        controlador.escalarRectangulo();
+    }//GEN-LAST:event_btnEscalarActionPerformed
+
+    private void btnVerificarPuntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificarPuntoActionPerformed
+        controlador.verificarPunto();
+    }//GEN-LAST:event_btnVerificarPuntoActionPerformed
+
+    private void botonMoverRectanguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMoverRectanguloActionPerformed
+        controlador.moverRectangulo();
+    }//GEN-LAST:event_botonMoverRectanguloActionPerformed
+
+    private void p1xCreacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p1xCreacionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_p1xCreacionActionPerformed
+
+    private void inputDXActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputDXActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputDXActionPerformed
+
+    private void p1yCreacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p1yCreacionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_p1yCreacionActionPerformed
+    
+// Lectura de campos siempre como String el controlador convierte
+public String getP1xCreacion() { return p1xCreacion.getText(); }
+public String getP1yCreacion() { return p1yCreacion.getText(); }
+public String getP2xCreacion() { return p2xCreacion.getText(); }
+public String getP2yCreacion() { return p2yCreacion.getText(); }
+public String getInputDX()     { return inputDX.getText(); }
+public String getInputDY()     { return inputDY.getText(); }
+public String getFactorEscalar() { return factorEscalar.getText(); }
+public String getPxVerificar() { return pxVerificar.getText(); }
+public String getPyVerificar() { return pyVerificar.getText(); }
+
+// Salidas
+public void setResultadoCreacion(String texto)     { campoRectangulo.setText(texto); }
+public void setResultadoMover(String texto)        { campoMovimientoRectangulo.setText(texto); }
+public void setResultadoEscalar(String texto)      { campoEscala.setText(texto); }
+public void setResultadoVerificacion(String texto) { resultadoVerificacion.setText(texto); }
+public void setTextoCreacion(String texto)         { textoCreacionRectangulo.setText(texto); }
+
+public void mostrarError(String mensaje) {
+    javax.swing.JOptionPane.showMessageDialog(this, mensaje, "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+}
     /**
      * @param args the command line arguments
      */
@@ -70,5 +457,51 @@ public class VistaRectangulo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonCrearRectangulo;
+    private javax.swing.JButton botonMoverRectangulo;
+    private javax.swing.JButton botonMoverRectangulo1;
+    private javax.swing.JButton btnEscalar;
+    private javax.swing.JButton btnVerificarPunto;
+    private javax.swing.JTextArea campoEscala;
+    private javax.swing.JTextArea campoMovimientoRectangulo;
+    private javax.swing.JTextArea campoRectangulo;
+    private javax.swing.JTextField factorEscalar;
+    private javax.swing.JTextField inputDX;
+    private javax.swing.JTextField inputDY;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JTextArea jTextArea4;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField p1xCreacion;
+    private javax.swing.JTextField p1yCreacion;
+    private javax.swing.JTextField p2xCreacion;
+    private javax.swing.JTextField p2yCreacion;
+    private javax.swing.JPanel panel;
+    private javax.swing.JTextField pxVerificar;
+    private javax.swing.JTextField pyVerificar;
+    private javax.swing.JLabel resultadoVerificacion;
+    private javax.swing.JLabel textoCreacionRectangulo;
     // End of variables declaration//GEN-END:variables
 }

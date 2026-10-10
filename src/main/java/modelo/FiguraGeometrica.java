@@ -8,6 +8,7 @@ package modelo;
  *
  * @author coffe
  */
-public class FiguraGeometrica {
-    
+public abstract class FiguraGeometrica {
+    public abstract double calcularArea();
+    public abstract void mover(double dx, double dy);
 }
